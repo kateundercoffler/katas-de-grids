@@ -35,8 +35,8 @@ body {
     grid-gap: 1em;
     grid-template-areas:
         "header"
-        "content"
         "sidebar"
+        "content"
         "sidebar2"
         "footer"
 }
@@ -55,7 +55,7 @@ body {
 @media only screen and (min-width: 600px) {
     .wrapper {
         grid-gap: 20px;
-        grid-template-columns: 120px 120px auto ;
+        grid-template-columns: 120px auto 120px;
         grid-template-areas:
             "header  header  header"
             "sidebar content sidebar2"
@@ -74,104 +74,20 @@ body {
 /* aires occupées par les éléments d'interface */
 .header {
     grid-area: header;
-    display: inline;
-    grid-column-end: 3;
-}
-
-@media (min-width: 500px) {
-    .header {
-        grid-column-end: 3;
-    }
-}
-@media (min-width: 600px) {
-    .header {
-        grid-column-end: 4;
-    }
 }
 
 .content {
     grid-area: content;
-    display: inline;
-    grid-column-end: 3;
-}
-
-@media (min-width: 500px) {
-    .content {
-        grid-column-start: 2;
-    }
-}
-@media (min-width: 600px) {
-    .content {
-        grid-column-start: 3;
-        grid-row-start: 2;
-        grid-row-end: 3;
-        
-    }
 }
 
 .sidebar {
     grid-area: sidebar;
-    display: grid;
-    grid-row-start: 3;
-    grid-row-end: 4;
-    grid-column-end: 2;
-}
-
-@media (min-width: 500px) {
-    .sidebar {
-        grid-column-start: 1;
-        grid-column-end: 2;
-        grid-row-start: 2;
-        grid-row-end: 3;
-    }
-}
-@media (min-width: 600px) {
-    .sidebar {
-        grid-column-start: 1;
-        grid-column-end: 2;
-        grid-row-start: 2;
-        grid-row-end: 3;
-    }
 }
 
 .sidebar2 {
     grid-area: sidebar2;
-    display: grid;
-    grid-row-start: 3;
-    grid-row-end: 4;
-    grid-column-start: 2;
-    grid-column-end: 3;
-}
-
-@media (min-width: 500px) {
-    .sidebar2 {
-        grid-column-start: 2;
-        grid-column-end: 3;
-        grid-row-start: 2;
-        grid-row-end: 3;
-
-    }
-}
-@media (min-width: 600px) {
-    .sidebar2 {
-        
-
-    }
 }
 
 .footer {
     grid-area: footer;
-    display: grid;
-    grid-column-end: 3;
-}
-
-@media (min-width: 500px) {
-    .footer {
-        grid-column-end: 3;
-    }
-}
-@media (min-width: 600px) {
-    .footer {
-        grid-column-end: 4;
-    }
 }
